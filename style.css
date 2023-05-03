@@ -1,0 +1,326 @@
+:root{
+    --red1: rgb(255, 149, 107);
+    --red2: rgb(255, 0, 0);
+    --blue1: rgb(76, 204, 255);
+    --blue2: rgb(55, 0, 255);
+    --blue3: rgba(76, 82, 255, 0.1);
+    --blue4: rgb(55, 0, 255, 0.1);
+    --green1: rgb(113, 255, 130);
+    --green2: rgb(18, 211, 0);
+    --purple1: rgb(210, 114, 255);
+    --purple2: rgb(195, 65, 255);
+    --purple3: rgb(122, 2, 177);
+    --purpleT1: rgba(93, 0, 180, 0.1);
+    --purpleT2: rgba(93, 1, 136, 0.3);
+    
+	--verde1: rgb(211, 255, 197);
+	--verde2: rgb(173, 255, 79);
+	--verde3: rgb(18, 218, 0);
+	--verde4: rgb(42, 172, 3);
+    --verde5: rgba(67, 224, 0, 0.2);
+	--verde6: rgba(38, 133, 0, 0.3);
+    --rojo1: rgba(255, 40, 87, 0.1);
+    --rojo2: rgb(255, 0, 0);
+    --azul1: rgb(0, 119, 255);
+    --azul2: rgb(45, 154, 255);
+    --grad1: rgba(7, 71, 45, 0.8), rgba(9, 158, 113, 0.8), rgba(7, 71, 45, 0.8); 
+    --grad2: rgb(0, 0, 0),
+		     rgb(14, 0, 37)30%,
+		     rgb(43, 1, 59),
+		     rgb(14, 0, 37)70%,
+			 rgb(0, 0, 0);
+}
+*{
+    padding: 0%;
+    margin: 0%;
+}
+body{
+    font-size: 1.1em;
+	font-family: "Segoe UI Semibold";
+    background: black;
+	background-size: 400% 400%;
+    animation: fondo 20s linear infinite;
+    color: white;
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 140px;
+    padding-bottom: 20px;
+}
+h1, h2, h3, h4, h5, h6 
+{
+    color: rgb(255, 255, 255);
+	font-family: sans-serif;
+    text-shadow: 3px 2px 1px var(--purple1), 3px 4px 8px var(--purple2);
+}
+table, td, tr
+{
+	border: 3px double  var(--purple3);
+	background: var(--purpleT1);
+	border-radius: 8px;
+	padding: 3px 5px;
+}
+th
+{
+	text-shadow: 4px 4px 3px black;
+    border: 3px double  var(--purple3);
+    background: var(--purpleT2);
+	font-size: 1.3em;
+	border-radius: 8px;
+	text-align: center;
+	padding: 1px 1px;
+}
+#medidasPosicion table
+{
+    margin-top: 15px;
+}
+#medidasPosicion table, #medidasPosicion td, #medidasPosicion tr
+{
+	border: 3px double  var(--red2);
+	background: var(--rojo1);
+	border-radius: 8px;
+	text-align: center;
+	padding: 3px 5px;
+}
+#medidasPosicion td
+{
+    padding: 0px 20px;
+}
+#medidasPosicion th
+{
+	text-shadow: 4px 4px 3px black;
+    border: 3px double  var(--red2);
+    background: var(--rojo1);
+	font-size: 1.3em;
+	border-radius: 8px;
+	text-align: center;
+	padding: 1px 1px;
+}
+#outputDataTable th, #outputDataTable td{
+    min-width: 120px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+}
+#inputData table, #inputData td, #inputData tr
+{
+	border: 3px double  var(--blue2);
+	background: var(--blue4);
+	border-radius: 8px;
+	padding: 3px 5px;
+}
+#inputDataTable td, #inputDataTable th{
+    min-width: 70px;
+}
+#inputDataTable th
+{
+	text-shadow: 4px 4px 3px black;
+    border: 3px double  var(--blue2);
+    background: var(--blue4);
+	font-size: 1.3em;
+	border-radius: 8px;
+	text-align: center;
+	padding: 1px 1px;
+}
+.invisible{
+    background: transparent;
+    border: 0px;
+    outline: 0px;
+}
+#ath{
+    position: fixed;
+    bottom: 0%;
+    right: 10%;
+}
+#ath::before {
+    color: #ffffff;
+    content: 'Author: Edwin';
+    font-size: 12;
+    opacity: 0.5;
+    animation: animA 2s linear infinite alternate;
+}
+@keyframes animA {
+    0% {color: var(--blue1);}
+    25% {color: var(--blue2)}
+    75% {color: var(--purple2)}
+    100% {color: var(--purple3)}
+}
+.generalInput{
+    padding: 3px;
+    font-size: 14px;
+    border-width: 3px;
+    background-color: transparent;
+    color: #ffffff;
+    border-style: solid;
+    border-radius: 8px;
+    width: 160px;
+}
+.inputGreen{
+    border-color: var(--green1);
+    box-shadow: 0px 0px 8px 2px var(--green2);
+}
+.inputRed{
+    border-color: var(--red1);
+    box-shadow: 0px 0px 8px 2px var(--red2);
+}
+.inputBlue{
+    border-color: var(--blue1);
+    box-shadow: 0px 0px 8px 2px var(--blue2);
+    width: 90px;
+}
+.inputPurple{
+    border-color: var(--purple1);
+    box-shadow: 0px 0px 8px 2px var(--purple3);
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+.textPurple{
+    text-shadow: 1.5px 1px 0.5px var(--purple2), 2px 3px 1px var(--purple3);
+}
+.textGreen{
+    text-shadow: 1.5px 1px 0.5px var(--green1), 2px 3px 1px var(--green2);
+}
+.textRed{
+    text-shadow: 1.5px 1px 0.5px var(--red1), 2px 3px 1px var(--red2);
+}
+.textBlue{
+    text-shadow: 1.5px 1px 0.5px var(--blue1), 2px 3px 1px var(--blue2);
+}
+.buttons
+{
+	color: white;
+    font-size: 0.9em;
+	border: 1px solid rgba(197, 224, 255, 0.2);
+    background: rgba(0, 68, 255, 0.3);
+	padding: 7px  20px;
+	transition: 0.6s ease-out;
+	border-radius: 6px;
+}
+.buttons:hover
+{
+	animation-delay: 0.6s;
+	animation: modificarse 1s linear infinite alternate;
+}
+.buttonsB
+{
+	color: white;
+    font-size: 0.9em;
+	border: 1px solid rgba(240, 197, 255, 0.2);
+    background: rgba(136, 0, 255, 0.3);
+	padding: 7px  20px;
+	transition: 0.6s ease-out;
+	border-radius: 6px;
+}
+.buttonsB:hover
+{
+	animation-delay: 0.6s;
+	animation: modificarseB 1s linear infinite alternate;
+}
+.buttonsR
+{
+	color: white;
+    font-size: 0.9em;
+	border: 1px solid rgba(255, 225, 197, 0.2);
+    background: rgba(255, 0, 0, 0.3);
+	padding: 7px  20px;
+	transition: 0.6s ease-out;
+	border-radius: 6px;
+}
+.buttonsR:hover
+{
+	animation-delay: 0.6s;
+	animation: modificarseR 1s linear infinite alternate;
+}
+@keyframes modificarse
+{
+	0%
+	{
+		border-radius: 6px;
+	}
+	100%
+	{
+		border-radius: 20px;
+		background: rgba(141, 209, 255, 0.8);
+	}
+}
+@keyframes modificarseB
+{
+	0%
+	{
+		border-radius: 6px;
+	}
+	100%
+	{
+		border-radius: 20px;
+		background: rgba(255, 141, 255, 0.8);
+	}
+}
+@keyframes modificarseR
+{
+	0%
+	{
+		border-radius: 6px;
+	}
+	100%
+	{
+		border-radius: 20px;
+		background: rgba(255, 141, 141, 0.8);
+	}
+}
+#inputData{
+    max-width: 100vw;
+    overflow: auto;
+}
+#outputDataTableDiv{
+    max-width: 100vw;
+    overflow: auto;
+}
+math *{
+    font-size: 1.05rem;
+}
+.classSupp{
+    text-align: center;
+    width: 55px;
+}
+.toggleCheckbox {
+    display: none;
+}
+.toggleLabel {
+    display: inline-block;
+    width: 55px;
+    height: 20px;
+    background-color: rgb(230, 230, 230);
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+    transition-duration: 1s;
+    margin-bottom: -0.35em;
+    margin-left: 8px;
+}
+.toggleLabel:after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 20px;
+    border-radius: 15px;
+    top: 0;
+    left: 0;
+    background: radial-gradient(circle, rgba(255,169,165,1) 0%, rgb(255, 136, 130) 100%);
+    box-shadow: 0px 0px 0px 0px rgb(0, 0, 0);
+    transition: left 0.3s ease-in-out;
+}
+#toggleBtn:checked + .toggleLabel {
+    background-color: var(--red2);
+}
+#toggleBtn:checked + .toggleLabel:after {
+    left: 25px;
+    background: radial-gradient(circle, rgba(255,169,165,1) 0%, rgba(255,47,47,1) 100%);
+    box-shadow: 0px 0px 5px 2px rgb(255, 129, 129);
+    transition-duration: 0.3s;
+}
+#startData *{
+    display: inline-block !important;
+    margin-right: 10px;
+}
